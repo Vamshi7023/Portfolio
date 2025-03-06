@@ -22,6 +22,7 @@
 	<link rel="stylesheet" href="css/flaticon.css">
 	<link rel="stylesheet" href="css/icomoon.css">
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="btn.css">
 	<style>
 		#about {
 			position: relative;
@@ -192,19 +193,23 @@
 	<section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
 		<div class="container">
 			<div class="row d-flex">
-				<div class="col-md-6 col-lg-5 d-flex">
+				<div class="col-md-6 col-lg-5 d-flex flex-column align-items-center">
 					<div class="img-about img d-flex align-items-stretch">
 						<div class="overlay"></div>
-						<div class="one-third order-md-last img" style="background-image:url('images/about-pic.png'); 
-            background-size: cover;  
-            background-position: center; 
-            border-radius: 25px;
-			margin-top:100px; 
-            height: 500px;  /* Normal height */
-            width: 500px;">
+						<div class="one-third order-md-last img" style="background-image:url('images/about-pic.png');
+							background-size: cover;
+							background-position: center;
+							border-radius: 25px;
+							margin-top:100px;
+							height: 500px;
+							width: 500px;">
 							<div class="overlay"></div>
 						</div>
 					</div>
+					<!-- Move the button below the image -->
+					<p class="mt-4 text-center">
+						<a href="/resume.pdf" class="btn btn-primary py-3 px-3">Download CV</a>
+					</p>
 				</div>
 				<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
 					<div class="row justify-content-start pb-3">
@@ -219,13 +224,12 @@
 								<div class="about-containers">
 									<div class="details-container">
 										<h3>Engg.</h3>
-										<p>Vellore Inistitute of Technology <br />M.TECH INTEGRATED (CSE)</p>
+										<p>Vellore Institute of Technology <br />M.TECH INTEGRATED (CSE)</p>
 									</div>
 									<div class="details-container">
-										<h3>Collage</h3>
-										<p>NARAYANA PU-COLLAGE<br />PCMC</p>
+										<h3>College</h3>
+										<p>NARAYANA PU-COLLEGE<br />PCMC</p>
 									</div>
-
 								</div>
 								<div class="about-details-container">
 									<div class="about-containers" style="margin: 0%;">
@@ -241,19 +245,13 @@
 								</div>
 							</div>
 						</div>
-						<div class="counter-wrap ftco-animate d-flex mt-md-3">
-							<div class="text">
-								<!-- <p class="mb-4">
-									<span class="number" data-number="8">0</span>
-									<span>Project complete</span>
-								</p> -->
-								<p><a href="/resume.pdf" class="btn btn-primary py-3 px-3">Download CV</a></p>
-							</div>
-						</div>
+						<!-- Removed button from here -->
 					</div>
 				</div>
 			</div>
+		</div>
 	</section>
+	
 
 	<section class="ftco-section" id="skills-section">
 		<div class="container">
@@ -261,101 +259,42 @@
 				<div class="col-md-12 heading-section text-center ftco-animate">
 					<h1 class="big big-2">Skills</h1>
 					<h2 class="mb-4">My Skills</h2>
-					
 				</div>
 			</div>
-			<div class="row">
-				<div class="col-md-6 animate-box">
-					<div class="progress-wrap ftco-animate">
-						<h3>JAVA</h3>
-						<div class="progress">
-							<div class="progress-bar color-1" role="progressbar" aria-valuenow="90" aria-valuemin="0"
-								aria-valuemax="100" style="width:90%">
-								<span>90%</span>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-6 animate-box">
-					<div class="progress-wrap ftco-animate">
-						<h3>C++</h3>
-						<div class="progress">
-							<div class="progress-bar color-2" role="progressbar" aria-valuenow="85" aria-valuemin="0"
-								aria-valuemax="100" style="width:85%">
-								<span>85%</span>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-6 animate-box">
-					<div class="progress-wrap ftco-animate">
-						<h3>HTML5</h3>
-						<div class="progress">
-							<div class="progress-bar color-3" role="progressbar" aria-valuenow="95" aria-valuemin="0"
-								aria-valuemax="100" style="width:95%">
-								<span>95%</span>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-6 animate-box">
-					<div class="progress-wrap ftco-animate">
-						<h3>CSS3</h3>
-						<div class="progress">
-							<div class="progress-bar color-4" role="progressbar" aria-valuenow="90" aria-valuemin="0"
-								aria-valuemax="100" style="width:90%">
-								<span>90%</span>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-6 animate-box">
-					<div class="progress-wrap ftco-animate">
-						<h3>Python</h3>
-						<div class="progress">
-							<div class="progress-bar color-5" role="progressbar" aria-valuenow="70" aria-valuemin="0"
-								aria-valuemax="100" style="width:70%">
-								<span>70%</span>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-6 animate-box">
-					<div class="progress-wrap ftco-animate">
-						<h3>JavaScript</h3>
-						<div class="progress">
-							<div class="progress-bar color-6" role="progressbar" aria-valuenow="80" aria-valuemin="0"
-								aria-valuemax="100" style="width:80%">
-								<span>80%</span>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-6 animate-box">
-					<div class="progress-wrap ftco-animate">
-						<h3>Flutter</h3>
-						<div class="progress">
-							<div class="progress-bar color-7" role="progressbar" aria-valuenow="75" aria-valuemin="0"
-								aria-valuemax="100" style="width:75%">
-								<span>75%</span>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-6 animate-box">
-					<div class="progress-wrap ftco-animate">
-						<h3>Dart</h3>
-						<div class="progress">
-							<div class="progress-bar color-8" role="progressbar" aria-valuenow="75" aria-valuemin="0"
-								aria-valuemax="100" style="width:75%">
-								<span>75%</span>
-							</div>
-						</div>
-					</div>
-				</div>
+	
+			<!-- Languages Section -->
+			<h2 class="mbskills">Languages</h2>
+			<div class="skills-row">
+				<button class="btnskill">Java</button>
+				<button class="btnskill">C++</button>
+				<button class="btnskill">HTML</button>
+				<button class="btnskill">CSS</button>
+				<button class="btnskill">JavaScript</button>
+				<button class="btnskill">React</button>
+			</div>
+	
+			<!-- Databases Section -->
+			<h2 class="mbskills">Databases</h2>
+			<div class="skills-row">
+				<button class="btnskill">MySQL</button>
+				<button class="btnskill">MongoDB</button>
+				<button class="btnskill">Redis</button>
+			</div>
+	
+			<!-- Platforms Section -->
+			<h2 class="mbskills">Platforms</h2>
+			<div class="skills-row">
+				<button class="btnskill">VSCode</button>
+				<button class="btnskill">Tomcat</button>
+				<button class="btnskill">Maven</button>
+				<button class="btnskill">Star UML</button>
+				<button class="btnskill">AWS</button>
+				<button class="btnskill">Cloudflare</button>
+				<button class="btnskill">GitHub</button>
 			</div>
 		</div>
 	</section>
+	
 
 	<!-- Cretificates Section -->
 	<section class="ftco-section ftco-project" id="Certificates-section">
