@@ -1,0 +1,84 @@
+/* Button Styling */
+.btnskill {
+    background-color: #4a3f3f; /* Softer dark color */
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    padding: 15px 30px;
+    margin: 10px;
+    width: 22%; /* Ensures 4 buttons per row */
+    text-align: center;
+    border-radius: 8px; /* Slight rounded edges */
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Hover Effect */
+.btnskill:hover {
+    background-color: white;
+    color: #4a3f3f;
+    border: 2px solid #4a3f3f;
+    transform: scale(1.05);
+}
+
+.btnskill:active {
+    transform: scale(0.95);
+}
+
+/* Section Headers */
+.mbskills {
+    text-align: center;
+    font-weight: bold;
+    font-size: 24px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    color: white; /* Keep it clean */
+    position: relative;
+}
+
+/* Add an underline effect instead of a background */
+.mbskills::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #ffcc00; /* Gold underline */
+    margin: 8px auto;
+}
+
+/* Button Layout */
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px; /* Adds more space between buttons */
+    max-width: 900px;
+    margin: auto;
+}
+
+/* Ensures 4 buttons per row */
+.skills-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px; /* Adjusted for better spacing */
+    margin-bottom: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .btnskill {
+        width: 45%; /* 2 per row on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .btnskill {
+        width: 90%; /* Full width for very small screens */
+    }
+}
