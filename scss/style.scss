@@ -901,6 +901,17 @@ h1, h2, h3, h4, h5,
 // 		}
 // 	}
 // }
+
+
+
+// Experience Image
+
+.experience_logo {
+    width: 100px;
+    height: 100px; /* Adjust as needed */
+    object-fit: contain; /* Ensures the image scales properly */
+}
+
 .services-1{
 	margin-bottom: 40px;
 	padding: 2em;
