@@ -108,6 +108,86 @@
 		.gallery img:hover {
 			transform: scale(2.00);
 		}
+
+		/* Light theme overrides */
+		body.light-theme { background: #ffffff; color: #222; }
+		body.light-theme h1, body.light-theme h2, body.light-theme h3, body.light-theme h4, body.light-theme h5,
+		body.light-theme .h1, body.light-theme .h2, body.light-theme .h3, body.light-theme .h4, body.light-theme .h5 { color: #111; }
+
+		/* Navbar overrides in light mode */
+		body.light-theme .ftco-navbar-light { background: #ffffff !important; }
+		body.light-theme .ftco-navbar-light .navbar-brand { color: #000 !important; }
+		body.light-theme .ftco-navbar-light .navbar-nav > .nav-item > .nav-link { color: #000 !important; }
+		body.light-theme .ftco-navbar-light .navbar-nav > .nav-item .nav-link.active { color: #ffbd39 !important; }
+		body.light-theme .ftco-navbar-light.scrolled { background: #ffffff !important; }
+		body.light-theme .ftco-navbar-light.scrolled .nav-item > .nav-link { color: #000 !important; }
+
+		/* Hero text colors in light mode */
+		body.light-theme .slider-text h1 { color: #111 !important; }
+		body.light-theme .slider-text h2 { color: #333 !important; }
+		body.light-theme .slider-text p { color: rgba(0,0,0,0.8) !important; }
+
+		/* Footer in light mode */
+		body.light-theme .ftco-footer { background: #f7f7f7 !important; }
+		body.light-theme .ftco-footer p,
+		body.light-theme .ftco-footer a,
+		body.light-theme .ftco-footer .ftco-footer-widget h2,
+		body.light-theme .ftco-footer .ftco-footer-social a span,
+		body.light-theme .ftco-footer .icon,
+		body.light-theme .ftco-footer .text,
+		body.light-theme .ftco-footer .list-unstyled li a span { color: #222 !important; }
+		body.light-theme .ftco-footer .ftco-footer-social a { background: rgba(0,0,0,0.05); }
+
+		/* Cards and containers */
+		body.light-theme .details-container { background: #ffffff; border-color: #e0e0e0; color: #333; }
+
+		/* Contact section link color in light mode */
+		body.light-theme .contact-section .contact-info p a { color: #0d6efd !important; }
+
+		/* Increase spacing between contact cards */
+		.contact-section .contact-info { gap: 20px; }
+
+		/* Theme toggle button styling */
+		.theme-toggle { display: inline-flex; align-items: center; gap: 8px; background: transparent; color: #fff; border: 1px solid rgba(255,255,255,0.5); border-radius: 999px; padding: 6px 12px; line-height: 1; }
+		.theme-toggle .icon { font-size: 18px; line-height: 1; }
+		.theme-toggle:hover { border-color: #ffbd39; }
+		body.light-theme .theme-toggle { color: #000; border-color: rgba(0,0,0,0.4); }
+	/* Reduce side whitespace */
+		.container { max-width: 1320px; padding-left: 12px; padding-right: 12px; }
+		@media (min-width: 1400px) { .container { max-width: 1400px; } }
+		.ftco-navbar-light .container { width: 100%; max-width: 1320px; padding-left: 12px; padding-right: 12px; }
+		@media (min-width: 1400px) { .ftco-navbar-light .container { max-width: 1400px; } }
+		/* Hero text width tweak */
+		.hero .slider-text .one-forth .text { max-width: 60%; padding-right: 1.5em; }
+
+		/* Motion animations */
+		.details-container,
+		.project,
+		.contact-section .box { transition: transform .3s ease, box-shadow .3s ease; }
+		.details-container:hover,
+		.project:hover,
+		.contact-section .box:hover { transform: translateY(-6px); box-shadow: 0 10px 30px rgba(0,0,0,0.2); }
+	/* Floating image animations */
+		@keyframes floatY {
+		  0% { transform: translateY(0); }
+		  50% { transform: translateY(-12px); }
+		  100% { transform: translateY(0); }
+		}
+		@keyframes floatYAlt {
+		  0% { transform: translateY(-6px); }
+		  50% { transform: translateY(6px); }
+		  100% { transform: translateY(-6px); }
+		}
+		.hero .one-third.img { animation: floatY 8s ease-in-out infinite; will-change: transform; }
+		.ftco-about .one-third.img { animation: floatYAlt 9s ease-in-out infinite; will-change: transform; }
+		.gallery img { animation: floatY 7.5s ease-in-out infinite; will-change: transform; }
+		.gallery img:nth-child(odd) { animation-duration: 9s; }
+		.gallery img:nth-child(3n) { animation-delay: .8s; }
+		@media (prefers-reduced-motion: reduce) {
+		  .hero .one-third.img,
+		  .ftco-about .one-third.img,
+		  .gallery img { animation: none !important; }
+		}
 	</style>
 
 </head>
@@ -137,7 +217,13 @@
 					<li class="nav-item"><a href="#projects-section" class="nav-link"><span>Projects</span></a></li>
 					<!-- <li class="nav-item"><a href="#blog-section" class="nav-link"><span>My Blog</span></a></li> -->
 					<li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
-				</ul>
+					<li class="nav-item d-flex align-items-center">
+						<button id="theme-toggle" class="btn btn-sm theme-toggle" type="button" aria-pressed="false">
+							<span class="icon ion-ios-sunny"></span>
+							<span class="label-text">Light mode</span>
+						</button>
+					</li>
+					</ul>
 			</div>
 		</div>
 	</nav>
@@ -192,7 +278,7 @@
 		</div>
 	</section>
 
-	<section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+	<section class="ftco-about img ftco-section ftco-no-pb" id="about-section" data-aos="fade-up">
 		<div class="container">
 			<div class="row d-flex">
 				<div class="col-md-6 col-lg-5 d-flex flex-column align-items-center">
@@ -255,7 +341,7 @@
 	</section>
 
 
-	<section class="ftco-section" id="skills-section">
+	<section class="ftco-section" id="skills-section" data-aos="fade-up">
 		<div class="container">
 			<div class="row justify-content-center pb-5">
 				<div class="col-md-12 heading-section text-center ftco-animate">
@@ -297,7 +383,7 @@
 		</div>
 	</section>
 
-	<section class="ftco-about img ftco-section ftco-no-pb" id="experience-section">
+	<section class="ftco-about img ftco-section ftco-no-pb" id="experience-section" data-aos="fade-up">
 		<div class="container">
 			<div class="row justify-content-center pb-5">
 				<div class="col-md-12 heading-section text-center ftco-animate">
@@ -355,7 +441,7 @@
 
 
 	<!-- Cretificates Section -->
-	<section class="ftco-section ftco-project" id="Certificates-section">
+	<section class="ftco-section ftco-project" id="Certificates-section" data-aos="fade-up">
 		<div class="container">
 			<div class="row justify-content-center pb-5">
 				<div class="col-md-12 heading-section text-center ftco-animate">
@@ -377,7 +463,7 @@
 
 
 
-	<section class="ftco-section ftco-project" id="projects-section">
+	<section class="ftco-section ftco-project" id="projects-section" data-aos="fade-up">
 		<div class="container">
 			<div class="row justify-content-center pb-5">
 				<div class="col-md-12 heading-section text-center ftco-animate">
@@ -621,7 +707,7 @@
 			</div>
 	</section> -->
 
-	<section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+	<section class="ftco-section contact-section ftco-no-pb" id="contact-section" data-aos="fade-up">
 		<div class="container">
 			<div class="row justify-content-center mb-5 pb-3">
 				<div class="col-md-7 heading-section text-center ftco-animate">
@@ -793,6 +879,44 @@
 	<script src="js/scrollax.min.js"></script>
 
 	<script src="js/main.js"></script>
+	<script>
+	(function() {
+	  function applyTheme(theme) {
+	    var body = document.body;
+	    var toggle = document.getElementById('theme-toggle');
+	    var labelEl = toggle ? toggle.querySelector('.label-text') : null;
+	    var iconEl = toggle ? toggle.querySelector('.icon') : null;
+	    if (theme === 'light') {
+	      body.classList.add('light-theme');
+	      if (labelEl) labelEl.textContent = 'Dark mode';
+	      if (iconEl) { iconEl.classList.remove('ion-ios-sunny'); iconEl.classList.add('ion-ios-moon'); }
+	      if (toggle) toggle.setAttribute('aria-pressed', 'true');
+	    } else {
+	      body.classList.remove('light-theme');
+	      if (labelEl) labelEl.textContent = 'Light mode';
+	      if (iconEl) { iconEl.classList.remove('ion-ios-moon'); iconEl.classList.add('ion-ios-sunny'); }
+	      if (toggle) toggle.setAttribute('aria-pressed', 'false');
+	    }
+	  }
+
+	  var stored = localStorage.getItem('theme');
+	  if (!stored) {
+	    var prefersLight = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches;
+	    stored = prefersLight ? 'light' : 'dark';
+	  }
+	  applyTheme(stored);
+
+	  document.addEventListener('click', function(e) {
+	    var t = e.target.closest('#theme-toggle');
+	    if (!t) return;
+	    e.preventDefault();
+	    var current = document.body.classList.contains('light-theme') ? 'light' : 'dark';
+	    var next = current === 'light' ? 'dark' : 'light';
+	    localStorage.setItem('theme', next);
+	    applyTheme(next);
+	  });
+	})();
+	</script>
 
 </body>
 
