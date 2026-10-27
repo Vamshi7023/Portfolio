@@ -43,7 +43,7 @@ export const experiences = [
       "Modular JavaScript Architecture: Developed reusable JavaScript modules and integrated JSON-based data sources to improve code reusability, execution efficiency, and long-term maintainability.",
       "Pull Request & Version Control: Raised and managed 30+ PRs in Azure DevOps, resolved Git merge conflicts during feature integration and repository migration, maintaining code stability across branches."
     ],
-    techStack: ["JavaScript", "Node.js", "REST API", "Axios", "Azure DevOps", "Git", "YAML", "JSON"]
+    techStack: [ "Node.js", "Express Js","JavaScript", "REST API", "Axios", "Azure DevOps", "Git", "YAML", "JSON"]
   },
   {
     company: "ItJobXS",
